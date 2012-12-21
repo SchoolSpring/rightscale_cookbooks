@@ -17,7 +17,7 @@
   </DirectoryMatch>
 
   <Directory <%= @params[:docroot] %>/www>
-    Options FollowSymLinks
+    Options FollowSymLinks Indexes MultiViews
     AllowOverride None
     Order allow,deny
     Allow from all
