@@ -11,14 +11,14 @@
 
 <VirtualHost *:<%= @params[:vhost_port] %>>
   ServerName <%= @params[:server_name] %>
-  DocumentRoot <%= @params[:docroot] %>
+  DocumentRoot <%= @params[:docroot] %>/www
   <DirectoryMatch  /\.git/|/\.svn/ >
     Deny from all
   </DirectoryMatch>
 
-  <Directory <%= @params[:docroot] %>>
-    Options FollowSymLinks
-    AllowOverride None
+  <Directory <%= @params[:docroot] %>/www>
+    Options FollowSymLinks Indexes MultiViews
+    AllowOverride All
     Order allow,deny
     Allow from all
   </Directory>
