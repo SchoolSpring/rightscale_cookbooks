@@ -9,8 +9,8 @@ rightscale_marker :begin
 
 log "  Setting provider specific settings for php application server."
 node[:app][:provider] = "app_php"
-node[:app][:version] = "5.3"
-log "  Setting php application server version to 5.3."
+node[:app][:version] = "5.4"
+log "  Setting php application server version to 5.4."
 
 # Setting generic app attributes
 case node[:platform]
